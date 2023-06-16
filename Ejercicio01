@@ -1,0 +1,18 @@
+function esCapicua(numero) {
+  var cadena = numero.toString();
+  var reversa = cadena.split('').reverse().join('');
+
+  return cadena === reversa;
+}
+
+function encontrarSiguienteCapicua(numero) {
+  var siguiente = numero + 1;
+
+  while (!esCapicua(siguiente)) {
+    siguiente++;
+  }
+
+  return siguiente;
+}
+
+console.log(encontrarSiguienteCapicua(123322));
